@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<component>
+  <table action="add" table_name="#__jobspro_" storage_engine="" collation="utf8mb4_unicode_ci">
+    <field field_name="id" field_type="INT" field_length="11" is_autoincrement="1" index="primary" description=""/>
+    <field field_name="ordering" field_type="INT" field_length="11" index="index" description=""/>
+    <field field_name="state" field_type="TINYINT" field_length="1" index="index" description=""/>
+    <field field_name="checked_out" field_type="INT" field_length="11" index="index" description=""/>
+    <field field_name="checked_out_time" field_type="DATETIME" description=""/>
+    <field field_name="created_by" field_type="INT" field_length="11" index="index" description=""/>
+    <field field_name="modified_by" field_type="INT" field_length="11" index="index" description=""/>
+    <field action="change" field_name="positiontype" field_type="VARCHAR" field_length="255" description=""/>
+    <field field_name="published" field_type="DATE" description=""/>
+    <field field_name="startdate" field_type="DATE" description=""/>
+    <field field_name="applicationdeadline" field_type="DATE" description=""/>
+    <field field_name="address" field_type="VARCHAR" field_length="255" description=""/>
+    <field field_name="title" field_type="VARCHAR" field_length="255" description=""/>
+    <field action="change" field_name="description" field_type="TEXT" description=""/>
+    <field field_name="link" field_type="VARCHAR" field_length="255" description=""/>
+    <field field_name="category" field_type="TEXT" description=""/>
+    <field field_name="alias" field_type="VARCHAR(255) COLLATE utf8_bin" description=""/>
+    <field action="remove" field_name="mod_wrap"/>
+  </table>
+</component>

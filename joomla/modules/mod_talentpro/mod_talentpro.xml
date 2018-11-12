@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" method="upgrade" client="site">
+    <name>MOD_TALENTPRO_NAME</name>
+    <creationDate>2018-08-13</creationDate>
+    <copyright>2018 Darwin Sese</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>MyCadena Solutions Team</author>
+    <authorEmail>info@mycadena.com</authorEmail>
+    <authorUrl>http://mycadena.com</authorUrl>
+    <version>CVS: 1.0.2</version>
+    <description>MOD_TALENTPRO_DESCRIPTION</description>
+    
+    <files>
+        <filename module="mod_talentpro">mod_talentpro.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+    </files>
+    <languages folder="languages">
+        
+			<language tag="en-GB">en-GB/en-GB.mod_talentpro.ini</language>
+			<language tag="en-GB">en-GB/en-GB.mod_talentpro.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset 
+                name="content_type" 
+                label="MOD_TALENTPRO_CONTENT_TYPE_TAB_LBL"
+                description="MOD_TALENTPRO_CONTENT_TYPE_TAB_DESC">
+                <field
+                    name="content_type" type="list"
+                    label="MOD_TALENTPRO_CONTENT_TYPE_LBL"
+                    description="MOD_TALENTPRO_CONTENT_TYPE_DESC">
+                    <option value="blank">MOD_TALENTPRO_CUSTOM_CONTENT</option>
+                    <option value="list">MOD_TALENTPRO_LIST</option>
+                    <option value="item">MOD_TALENTPRO_ITEM</option>
+                </field>
+            </fieldset>
+            <fieldset 
+                name="blank_content" 
+                label="MOD_TALENTPRO_CUSTOM_CONTENT_TAB_LBL"
+                description="MOD_TALENTPRO_CUSTOM_CONTENT_TAB_DESC">
+                <field 
+                    name="html_content" type="editor" filter="safehtml"
+                    label="MOD_TALENTPRO_HTML_LBL"
+                    description="MOD_TALENTPRO_HTML_DESC" />
+            </fieldset>
+            <fieldset 
+                name="list_content" 
+                label="MOD_TALENTPRO_LIST_CONTENT_TAB_LBL"
+                description="MOD_TALENTPRO_LIST_CONTENT_TAB_DESC">
+                <field
+                    name="table" type="list"
+                    label="MOD_TALENTPRO_TABLE_LBL"
+                    description="MOD_TALENTPRO_TABLE_DESC">
+                    
+	<option value="#__jobspro_">#__jobspro_</option>
+                </field>
+                <field 
+                    name="field" type="groupedlist" default=""
+                    label="MOD_TALENTPRO_FIELD_LBL"
+                    description="MOD_TALENTPRO_FIELD_DESC">
+                    
+	<group label="#__jobspro_">
+		<option value="id">id</option>
+		<option value="created_by">created_by</option>
+		<option value="modified_by">modified_by</option>
+		<option value="positiontype">positiontype</option>
+		<option value="published">published</option>
+		<option value="startdate">startdate</option>
+		<option value="applicationdeadline">applicationdeadline</option>
+		<option value="address">address</option>
+		<option value="title">title</option>
+		<option value="description">description</option>
+		<option value="link">link</option>
+		<option value="category">category</option>
+		<option value="alias">alias</option>
+	</group>
+                </field>
+                <field 
+                    name="offset" type="text" default="0" filter="uint" class="input-small"
+                    label="MOD_TALENTPRO_OFFSET_LBL"
+                    description="MOD_TALENTPRO_OFFSET_DESC" />
+                <field 
+                    name="limit" type="text" default="10" filter="uint" class="input-small"
+                    label="MOD_TALENTPRO_LIMIT_LBL"
+                    description="MOD_TALENTPRO_LIMIT_DESC" />
+            </fieldset>
+            <fieldset 
+                name="item_content" 
+                label="MOD_TALENTPRO_ITEM_CONTENT_TAB"
+                description="MOD_TALENTPRO_ITEM_CONTENT_TAB_DESC">
+                <field
+                    name="item_table" type="list"
+                    label="MOD_TALENTPRO_TABLE_LBL"
+                    description="MOD_TALENTPRO_TABLE_DESC">
+                    
+	<option value="#__jobspro_">#__jobspro_</option>
+                </field>
+                <field 
+                    name="item_id" type="text" filter="uint" class="input-small"
+                    label="MOD_TALENTPRO_ITEM_ID_LBL"
+                    description="MOD_TALENTPRO_ITEM_ID_DESC"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

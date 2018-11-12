@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="positiontype" type="combo" label="COM_TALENTPRO_FORM_LBL_JOB_POSITIONTYPE" description="COM_TALENTPRO_FORM_DESC_JOB_POSITIONTYPE" hint="COM_TALENTPRO_FORM_LBL_JOB_POSITIONTYPE">
+      <option value="FT_Employee">COM_TALENTPRO_JOBLIST_POSITIONTYPE_OPTION_FT_EMPLOYEE</option>
+      <option value="Intern">COM_TALENTPRO_JOBLIST_POSITIONTYPE_OPTION_INTERN</option>
+      <option value="Volunteer">COM_TALENTPRO_JOBLIST_POSITIONTYPE_OPTION_VOLUNTEER</option>
+    </field>
+    <field name="published" default="0000-00-00" type="calendar" class="inputbox" filter="safehtml" label="COM_TALENTPRO_FORM_LBL_JOB_PUBLISHED" description="COM_TALENTPRO_FORM_DESC_JOB_PUBLISHED" hint="COM_TALENTPRO_FORM_LBL_JOB_PUBLISHED"/>
+    <field name="startdate" default="0000-00-00" type="calendar" class="inputbox" filter="safehtml" label="COM_TALENTPRO_FORM_LBL_JOB_STARTDATE" description="COM_TALENTPRO_FORM_DESC_JOB_STARTDATE" hint="COM_TALENTPRO_FORM_LBL_JOB_STARTDATE"/>
+    <field name="applicationdeadline" default="0000-00-00" type="calendar" class="inputbox" filter="safehtml" label="COM_TALENTPRO_FORM_LBL_JOB_APPLICATIONDEADLINE" description="COM_TALENTPRO_FORM_DESC_JOB_APPLICATIONDEADLINE" hint="COM_TALENTPRO_FORM_LBL_JOB_APPLICATIONDEADLINE"/>
+    <field name="address" filter="safehtml" type="text" label="COM_TALENTPRO_FORM_LBL_JOB_ADDRESS" description="COM_TALENTPRO_FORM_DESC_JOB_ADDRESS" hint="COM_TALENTPRO_FORM_LBL_JOB_ADDRESS"/>
+    <field name="title" filter="safehtml" type="text" label="COM_TALENTPRO_FORM_LBL_JOB_TITLE" description="COM_TALENTPRO_FORM_DESC_JOB_TITLE" hint="COM_TALENTPRO_FORM_LBL_JOB_TITLE"/>
+    <field name="description" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="COM_TALENTPRO_FORM_LBL_JOB_DESCRIPTION" description="COM_TALENTPRO_FORM_DESC_JOB_DESCRIPTION" hint="COM_TALENTPRO_FORM_LBL_JOB_DESCRIPTION"/>
+    <field name="link" filter="safehtml" type="text" label="COM_TALENTPRO_FORM_LBL_JOB_LINK" description="COM_TALENTPRO_FORM_DESC_JOB_LINK" hint="COM_TALENTPRO_FORM_LBL_JOB_LINK"/>
+    <field name="category" extension="com_talentpro.joblist" multiple="true" type="category" label="COM_TALENTPRO_FORM_LBL_JOB_CATEGORY" description="COM_TALENTPRO_FORM_DESC_JOB_CATEGORY" hint="COM_TALENTPRO_FORM_LBL_JOB_CATEGORY"/>
+    <field name="alias" type="text" class="inputbox" generator="title" label="COM_TALENTPRO_FORM_LBL_JOB_ALIAS" description="COM_TALENTPRO_FORM_DESC_JOB_ALIAS" hint="COM_TALENTPRO_FORM_LBL_JOB_ALIAS"/>
+    <field name="mod_wrap" type="moduletag" label="COM_TALENTPRO_FORM_LBL_JOB_MOD_WRAP" description="COM_TALENTPRO_FORM_DESC_JOB_MOD_WRAP" hint="COM_TALENTPRO_FORM_LBL_JOB_MOD_WRAP"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>
